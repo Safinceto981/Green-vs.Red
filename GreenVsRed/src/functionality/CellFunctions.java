@@ -4,7 +4,7 @@ import model.Cell;
 
 public class CellFunctions {
 
-	
+	//if the color in the cell is green=>1
 	public int checkColor(int[][] board, Cell cell) {
 
 		int xCell = cell.getX();
@@ -26,10 +26,11 @@ public class CellFunctions {
 		int greenNeighborsN = neighboursGreen(board, cell);
 
 		int cellColor = board[xCell][yCell];
-
+//if the cell is red and has 3 o 6 green neighbors=>change the color
 		if (cellColor == 0 && (greenNeighborsN == 3 || greenNeighborsN == 6)) {
 			return true;
 		}
+		//if the cell is green and not surrounded by 2,3 or 6 greens stays green,else change to red
 		if (cellColor == 1 && (greenNeighborsN != 2 && greenNeighborsN != 3
 				&& greenNeighborsN != 6)) {
 			return true;
@@ -37,7 +38,7 @@ public class CellFunctions {
 
 		return false;
 	}
-
+//counts how many green neighbours has the cell
 	public int neighboursGreen(int[][] board, Cell cell) {
 		int xCell = cell.getX();
 		int yCell = cell.getY();

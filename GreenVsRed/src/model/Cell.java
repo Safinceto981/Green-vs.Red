@@ -1,6 +1,7 @@
 package model;
 
 public class Cell {
+	//cell model setter and getter
 	private int x;
 	private int y;
 
