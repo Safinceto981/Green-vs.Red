@@ -18,21 +18,15 @@ public class GameFunctions implements Game {
 	public void start() {
 		int[][] board = null;
 		String[] boardSize = null;
-		try {
-			
-			boardSize = value.readLine(", ");
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
-		//the board should have only 2 values
+		boardSize = value.readLine(", ");
+		// the board should have only 2 values
 		if (boardSize.length != 2) {
 
 			System.out.println("the lenght must be 2");
 		}
 		int width = Integer.parseInt(boardSize[0]);
 		int height = Integer.parseInt(boardSize[1]);
-		//making the size of the board
+		// making the size of the board
 		board = new int[height][width];
 		try {
 			build(board);
@@ -41,20 +35,15 @@ public class GameFunctions implements Game {
 			e.printStackTrace();
 		}
 		String[] fCell = null;
-		try {
-			//reading the coordinates of the first CELL
-			fCell = value.readLine(", ");
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
-		//second input is made from 3 values
+		// reading the coordinates of the first CELL
+		fCell = value.readLine(", ");
+		// second input is made from 3 values
 		int[] secInput = new int[3];
 		for (int i = 0; i < secInput.length; i++) {
 
 			secInput[i] = Integer.parseInt(fCell[i]);
 		}
-		//1st and 2nad values are the cell cordinates
+		// 1st and 2nad values are the cell cordinates
 		Cell cell = new Cell(secInput[1], secInput[0]);
 //3rd value for how many iterations should make
 		int iterations = secInput[2];

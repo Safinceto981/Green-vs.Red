@@ -1,6 +1,6 @@
 package model;
 
-import java.io.IOException;
+
 import java.util.Scanner;
 
 public class Value {
@@ -8,8 +8,8 @@ public class Value {
 	public Value(Scanner scanner) {
 		this.scanner=scanner;
 	}
-	
-	public String[] readLine(String line) throws IOException {
+	//reading the user input and splitting it
+	public String[] readLine(String line)  {
 	        return scanner.nextLine().split(line);
 	    }
 
