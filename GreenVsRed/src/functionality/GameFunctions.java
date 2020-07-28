@@ -15,7 +15,7 @@ public class GameFunctions implements Game {
 		this.value = new Value(new Scanner(System.in));
 	}
 
-	public void run() {
+	public void start() {
 		int[][] board = null;
 		String[] boardSize = null;
 		try {

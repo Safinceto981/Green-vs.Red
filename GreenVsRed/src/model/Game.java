@@ -6,12 +6,8 @@ import functionality.CellFunctions;
 import functionality.GameFunctions;
 
 public interface Game {
-	Value value = null;
-	CellFunctions cellFunctions = new CellFunctions();
 
-	GameFunctions gameFunctions = new GameFunctions();
-
-	void run();
+	void start();
 
 	void build(int[][] board) throws IOException;
 
